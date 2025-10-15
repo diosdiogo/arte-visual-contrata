@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento", "_blank");
+  const handleOrcamento = () => {
+    window.location.href = "/orcamento";
   };
 
   return (
@@ -30,7 +30,7 @@ const Hero = () => {
             Desenvolvimento de sites e softwares personalizados com 15 anos de experiência no mercado
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button onClick={handleWhatsApp} variant="hero" size="lg" className="text-lg">
+            <Button onClick={handleOrcamento} variant="hero" size="lg" className="text-lg">
               Solicitar Orçamento <ArrowRight className="ml-2" />
             </Button>
             <Button

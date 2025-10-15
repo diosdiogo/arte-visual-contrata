@@ -23,8 +23,8 @@ const Navbar = () => {
     }
   };
 
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento", "_blank");
+  const handleOrcamento = () => {
+    window.location.href = "/orcamento";
   };
 
   return (
@@ -52,7 +52,7 @@ const Navbar = () => {
             <button onClick={() => scrollToSection("testimonials")} className="text-foreground hover:text-primary transition-colors">
               Depoimentos
             </button>
-            <Button onClick={handleWhatsApp} variant="hero" size="lg">
+            <Button onClick={handleOrcamento} variant="hero" size="lg">
               Solicitar Orçamento
             </Button>
           </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
             >
               Depoimentos
             </button>
-            <Button onClick={handleWhatsApp} variant="hero" size="lg" className="w-full">
+            <Button onClick={handleOrcamento} variant="hero" size="lg" className="w-full">
               Solicitar Orçamento
             </Button>
           </div>
