@@ -11,6 +11,14 @@ import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+// Declaração de tipo para a função do Google Ads
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url?: string) => boolean;
+  }
+}
+
+
 const formSchema = z.object({
   nome: z.string().min(3, "Nome deve ter no mínimo 3 caracteres").max(100),
   email: z.string().email("Email inválido").max(255),
@@ -85,6 +93,11 @@ const Orcamento = () => {
           title: "Solicitação enviada com sucesso!",
           description: "Logo um de nossos colaboradores entrará em contato.",
         });
+
+        // Chamar função de conversão do Google Ads
+        if (typeof window.gtag_report_conversion === 'function') {
+          window.gtag_report_conversion();
+        }
 
         form.reset();
         setTimeout(() => navigate("/"), 2000);
