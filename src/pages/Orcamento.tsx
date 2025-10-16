@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -62,26 +61,36 @@ const Orcamento = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true);
     try {
-      const { error } = await supabase.from("leads").insert([{
-        nome: values.nome,
-        email: values.email,
-        telefone: values.telefone,
-        cep: values.cep,
-        endereco: values.endereco,
-        cidade: values.cidade,
-        estado: values.estado,
-        mensagem: values.mensagem || null,
-      }]);
-
-      if (error) throw error;
-
-      toast({
-        title: "Solicitação enviada!",
-        description: "Entraremos em contato em breve.",
+      const response = await fetch("https://api.artevisualsoft.com.br/salvar.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome: values.nome,
+          email: values.email,
+          telefone: values.telefone,
+          cep: values.cep,
+          endereco: values.endereco,
+          cidade: values.cidade,
+          estado: values.estado,
+          mensagem: values.mensagem || "",
+        }),
       });
 
-      form.reset();
-      setTimeout(() => navigate("/"), 2000);
+      const data = await response.json();
+
+      if (data.status === "success" || data.status === "warning") {
+        toast({
+          title: "Solicitação enviada com sucesso!",
+          description: "Logo um de nossos colaboradores entrará em contato.",
+        });
+
+        form.reset();
+        setTimeout(() => navigate("/"), 2000);
+      } else {
+        throw new Error(data.message || "Erro ao enviar");
+      }
     } catch (error) {
       console.error("Erro ao enviar:", error);
       toast({
