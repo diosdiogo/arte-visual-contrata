@@ -56,7 +56,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>(11) 99999-9999</span>
+                <span>(43) 99670-0687</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
@@ -64,7 +64,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>São Paulo, SP</span>
+                <span>Maringa, PR</span>
               </li>
             </ul>
           </div>
@@ -73,7 +73,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4 text-primary">Redes Sociais</h3>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/arte-visual-desenvolvimento"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -81,7 +81,7 @@ const Footer = () => {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/arte.visual.soft/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -89,7 +89,7 @@ const Footer = () => {
                 <Instagram className="h-6 w-6" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/Arte.Visual.Soft"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
