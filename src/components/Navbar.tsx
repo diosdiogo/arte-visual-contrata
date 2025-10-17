@@ -74,7 +74,7 @@ const Navbar = () => {
               Depoimentos
             </button>
             <Button onClick={handleOrcamento} variant="hero" size="lg">
-              Solicitar Orçamento
+              Fale com um especialista
             </Button>
           </div>
 
@@ -107,10 +107,10 @@ const Navbar = () => {
               onClick={() => scrollToSection("testimonials")}
               className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors"
             >
-              Depoimentos
+              Depoimentosdddd
             </button>
             <Button onClick={handleOrcamento} variant="hero" size="lg" className="w-full">
-              Solicitar Orçamento
+              Fale com um especialista
             </Button>
           </div>
         )}

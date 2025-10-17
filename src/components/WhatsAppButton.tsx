@@ -3,7 +3,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/t
 
 const WhatsAppButton = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento", "_blank");
+    window.open("https://wa.me/5543996700687?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento", "_blank");
   };
 
   return (

@@ -124,7 +124,7 @@ const Orcamento = () => {
           <div className="container mx-auto max-w-2xl">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-                Solicitar Orçamento
+                Fale com um especialista
               </h1>
               <p className="text-lg text-muted-foreground">
                 Preencha o formulário e entraremos em contato
@@ -259,7 +259,7 @@ const Orcamento = () => {
                 />
 
                 <Button type="submit" className="w-full" size="lg" disabled={isLoading}>
-                  {isLoading ? "Enviando..." : "Enviar Solicitação"}
+                  {isLoading ? "Enviando..." : "Fale com um especialista"}
                 </Button>
               </form>
             </Form>

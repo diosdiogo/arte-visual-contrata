@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button onClick={handleOrcamento} variant="hero" size="lg" className="text-lg">
-              Solicitar Orçamento <ArrowRight className="ml-2" />
+              Fale com um especialista <ArrowRight className="ml-2" />
             </Button>
             <Button
               onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
