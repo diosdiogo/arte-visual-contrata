@@ -9,10 +9,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-20 bg-muted/30" aria-labelledby="about-heading">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <header className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+          <h2 id="about-heading" className="text-4xl md:text-5xl font-bold mb-6">
             Sobre a <span className="text-primary">Arte Visual Software</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -20,7 +20,7 @@ const About = () => {
             transformam negócios. Nossa experiência e dedicação garantem projetos de alta qualidade, sempre 
             focados nas necessidades específicas de cada cliente.
           </p>
-        </div>
+        </header>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {stats.map((stat, index) => (

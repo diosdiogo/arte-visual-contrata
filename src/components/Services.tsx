@@ -36,16 +36,16 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-background" aria-labelledby="services-heading">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <header className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+          <h2 id="services-heading" className="text-4xl md:text-5xl font-bold mb-6">
             Nossos <span className="text-primary">Serviços</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Oferecemos soluções completas em desenvolvimento de software e design digital
           </p>
-        </div>
+        </header>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => (

@@ -27,16 +27,16 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-background">
+    <section id="testimonials" className="py-20 bg-background" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <header className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold mb-6">
             O que dizem nossos <span className="text-primary">Clientes</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Depoimentos reais de clientes satisfeitos com nosso trabalho
           </p>
-        </div>
+        </header>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (

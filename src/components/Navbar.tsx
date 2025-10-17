@@ -53,11 +53,13 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
+      role="navigation"
+      aria-label="Menu principal"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-2 cursor-pointer" onClick={handleLogoClick}>
-            <img src={logo} alt="Arte Visual Software" className="h-12 w-auto" />
+            <img src={logo} alt="Arte Visual Software - Desenvolvimento de Sites e Softwares" className="h-12 w-auto" />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -107,7 +109,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("testimonials")}
               className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors"
             >
-              Depoimentosdddd
+              Depoimentos
             </button>
             <Button onClick={handleOrcamento} variant="hero" size="lg" className="w-full">
               Fale com um especialista

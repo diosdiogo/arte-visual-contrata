@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 // Declaração de tipo para a função do Google Ads
 declare global {
@@ -117,19 +118,25 @@ const Orcamento = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1 pt-20">
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-2xl">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-                Fale com um especialista
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                Preencha o formulário e entraremos em contato
-              </p>
-            </div>
+    <>
+      <SEOHead 
+        title="Solicitar Orçamento | Arte Visual Software"
+        description="Solicite um orçamento grátis para desenvolvimento de sites, e-commerce, sistemas web ou aplicativos. Entre em contato com nossos especialistas."
+        canonicalUrl="https://artevisualsoft.com.br/orcamento"
+      />
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 pt-20">
+          <section className="py-20 px-4">
+            <div className="container mx-auto max-w-2xl">
+              <header className="text-center mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+                  Solicite seu Orçamento Grátis
+                </h1>
+                <p className="text-lg text-muted-foreground">
+                  Preencha o formulário e entraremos em contato para desenvolver seu projeto
+                </p>
+              </header>
 
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 bg-card p-8 rounded-lg shadow-lg">
@@ -264,10 +271,11 @@ const Orcamento = () => {
               </form>
             </Form>
           </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
